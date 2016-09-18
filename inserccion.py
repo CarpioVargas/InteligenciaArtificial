@@ -5,8 +5,8 @@ lista = [2, 8, 6, 1, 9, 0, -4]
 #inicia el tiempo de ejecucion
 tiempo_inicial = time()
 
-def ordenamientoInserccion(lista):
-	""" Ordenar una lista utilizando el metodo de Inserccion """
+def ordenamientoSeleccion(lista):
+	""" Ordenar una lista utilizando el metodo de seleccion"""
     
     for i in range(len(lista)):
     	#Encontrar la posicion con el numero mas chico
@@ -26,7 +26,7 @@ def ordenamientoInserccion(lista):
         
     print lista
 
-ordenamientoInserccion(lista)
+ordenamientoSeleccion(lista)
 #termina el tiempo de ejecucion
 tiempo_final = time()
 print tiempo_final - tiempo_inicial
