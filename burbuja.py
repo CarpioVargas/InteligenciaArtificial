@@ -12,7 +12,7 @@ def ordenamientoBurbuja(lista):
 
 ordenamientoBurbuja(lista)
 tiempo_final = time()
-print tiempo_final - tiempo_inicial 
+print tiempo_final - tiempo_inicial
 
 
 
