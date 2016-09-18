@@ -6,9 +6,10 @@ lista = [2, 8, 6, 1, 9, 0, -4]
 tiempo_inicial = time()
 
 def ordenamientoInserccion(lista):
+	""" Ordenar una lista utilizando el metodo de Inserccion """
     
     for i in range(len(lista)):
-    	#Encontrar la posicion con el numero mas chica
+    	#Encontrar la posicion con el numero mas chico
     	#Empezar desde la posicion actual
         pos_min = i
 
