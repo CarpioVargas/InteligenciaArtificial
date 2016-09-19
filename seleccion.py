@@ -1,20 +1,19 @@
 from time import time
 
-lista = [2, 8, 6, 1, 9, 0, -4]
+lista = [2, 8, 6, 3]
 
 #inicia el tiempo de ejecucion
 tiempo_inicial = time()
 
 def ordenamientoSeleccion(lista):
-	""" Ordenar una lista utilizando el metodo de seleccion"""
+    """ Ordenar una lista utilizando el metodo de seleccion"""
     
     for i in range(len(lista)):
     	#Encontrar la posicion con el numero mas chico
     	#Empezar desde la posicion actual
         pos_min = i
-
         for j in range(i + 1, len(lista)):
-
+            
         	#Es esta posicion mas chica?
             if lista[j] < lista[pos_min]:
 
