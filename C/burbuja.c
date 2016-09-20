@@ -3,7 +3,7 @@
 #include <time.h>
 //ordenamiento por seleccion
 
-void insercion(int lista[]){
+void burbuja(int lista[]){
   int tmp, i , j;
   int n = 10;
   clock_t begin = clock();
@@ -36,5 +36,5 @@ void main() {
     printf("%d -- ",lista[i]);
   }
   printf("\n");
-  insercion(lista);
+  burbuja(lista);
 }
