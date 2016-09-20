@@ -1,6 +1,6 @@
 from time import time
 
-lista = [2, 19, 10, 1, 40]
+lista = [40, 19, 10, 1, 2]
 
 #inicia tiempo de ejecucion
 tiempo_inicial = time()
@@ -15,12 +15,12 @@ def ordenamientoBurbuja(lista):
 			if (lista[j] > lista[j+1]):
 				# Intercambia los valores de la posicion actual con la siguiente 
 				lista[j+1], lista[j] = lista[j], lista[j+1]
-	print lista
+		print lista
 
 ordenamientoBurbuja(lista)
 #Fin del tiempo de ejecucion
 tiempo_final = time()
-print tiempo_final - tiempo_inicial
+print "Tiempo de ejecucion", tiempo_final - tiempo_inicial
 
 
 
