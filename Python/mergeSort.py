@@ -1,6 +1,6 @@
-
+from time import time
 lst = [3, 8, 5, 4]
-
+tiempo_inicial = time()
 
 def mergeSort(alist):
     if len(alist)>1:
@@ -21,7 +21,6 @@ def mergeSort(alist):
        
         i, j, k = 0,0,0
         while i < len(lefthalf) and j < len(righthalf):
-            print i, len(lefthalf)
             if lefthalf[i] < righthalf[j]:
             	alist[k] = lefthalf[i]
                 i=i+1
@@ -39,9 +38,10 @@ def mergeSort(alist):
             alist[k]=righthalf[j]
             j=j+1
             k=k+1
-    	
-    	
 
-
+        print alist
+    	
 mergeSort(lst)
+tiempo_final = time ()
+print tiempo_final - tiempo_inicial
 
