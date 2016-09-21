@@ -1,6 +1,6 @@
 from time import time
 
-lista = [2, 8, 5, 1, 9]
+lista = [2, 8, 5, 1, 3,  4]
 # Inicio de la ejecucion
 tiempo_inicio = time()
 
