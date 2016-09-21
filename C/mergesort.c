@@ -70,10 +70,12 @@ void main(){
   }
   printf("\nLista original \n");
   printArray(list, list_size);
+
   clock_t begin = clock();
   sort(list, 0, list_size - 1);
   clock_t end = clock();
   time_spent = (float)(end - begin) / CLOCKS_PER_SEC;
+  
   printf("\nLista ordenada \n");
   printArray(list, list_size);
   printf("%.10f\n",time_spent );
