@@ -24,7 +24,6 @@ def findthis(mat, start, end, route=[]):
 		return route
 
 	for i in mat[start]:
-		print i
 		if i not in route:
 			newroute = findthis(mat, i, end, route)
 			return newroute
