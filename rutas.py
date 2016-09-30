@@ -22,13 +22,14 @@ def findthis(mat, start, end, route=[]):
 
 	if start == end:
 		return route
-
+	
 	for i in mat[start]:
 		if i not in route:
 			newroute = findthis(mat, i, end, route)
 			return newroute
-	return None
+	return "No se puede llegar a se punto"
 
 start = raw_input("Dame el inicio: ")
 end = raw_input("Dame el destino: ")
-print findthis(mat, start, end)
+result = findthis(mat, start, end)
+print result
