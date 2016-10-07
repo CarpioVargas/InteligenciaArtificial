@@ -1,35 +1,27 @@
-# [1] = [2, 3, 6, 8]
-# [2] = [1, 3, 4, 5, 8]
-# [3] = [1, 2, 4]
-# [4] = [2, 3, 5, 8]
-# [5] = [2, 4, 6]
-# [6] = [1, 7]
-# [7] = [6, 8]
-# [8] = [1, 2, 4, 7]
-
-mat = {'1': ['2', '3', '6', '8'],
+matx = {  
+		 '1': ['2', '3', '6', '8'],
          '2': ['1', '3','4','5','8'],
          '3': ['1','2','4'],
          '4': ['2','3','5','8'],
-         '5': ['2','4','6'],
+         '5': ['2','4'],
          '6': ['1','7'],
          '7': ['6','8'],
          '8': ['1','2', '4', '7']
          }
 
-def findthis(mat, start, end, route=[]):
+def find_route (matx, start, end, route=[]):
 	route = route + [start]
-
 	if start == end:
-		return route
-	
-	for i in mat[start]:
-		if i not in route:
-			newroute = findthis(mat, i, end, route)
-			return newroute
-	return "No se puede llegar a se punto"
+		print route	
+		return 
 
-start = raw_input("Dame el inicio: ")
-end = raw_input("Dame el destino: ")
-result = findthis(mat, start, end)
-print result
+	if matx.has_key(start) and matx.has_key(end):
+		
+		for currentNode in matx[start]:
+			if not currentNode in route:
+				find_route(matx, currentNode, end, route)
+	else:
+		print "Does not exist"
+
+start, end = raw_input("start: "), raw_input("end: ")
+find_route(matx, start, end)
